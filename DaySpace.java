@@ -21,5 +21,10 @@ public class DaySpace implements Space {
    public void setSpaceImgName(String newSpaceImgName) {
       spaceImgName = newSpaceImgName;
    }
+   
+   /** @pdOid c02f9591-6396-44a5-8ac2-b05924a8cf81 */
+   public void loadingImg() {
+      // TODO: implement
+   }
 
 }

@@ -21,5 +21,10 @@ public class NightSpace implements Space {
    public void setSpaceImgName(String newSpaceImgName) {
       spaceImgName = newSpaceImgName;
    }
+   
+   /** @pdOid 704ed93b-aac4-4887-9644-3ab556330418 */
+   public void loadImg() {
+      // TODO: implement
+   }
 
 }
