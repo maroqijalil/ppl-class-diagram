@@ -27,6 +27,8 @@ public class Game {
    public Player canbein;
    /** @pdRoleInfo migr=no name=Level assc=association9 mult=1..1 type=Composition */
    public Level atleasthas;
+   /** @pdRoleInfo migr=no name=Enemy assc=association10 coll=java.util.Collection impl=java.util.HashSet mult=0..* type=Aggregation */
+   public java.util.Collection<Enemy> Enemy;
    
    /** @pdOid 0772a393-dd29-4e3e-9ac7-c2d656d2f965 */
    public Game Game() {
@@ -76,6 +78,56 @@ public class Game {
     * @pdOid 6f3316ad-b5dc-4bbd-be7e-4158dbbb5322 */
    public void setPlayer(Player newPlayer) {
       player = newPlayer;
+   }
+   
+   
+   /** @pdGenerated default getter */
+   public java.util.Collection<Enemy> getEnemy() {
+      if (Enemy == null)
+         Enemy = new java.util.HashSet<Enemy>();
+      return Enemy;
+   }
+   
+   /** @pdGenerated default iterator getter */
+   public java.util.Iterator getIteratorEnemy() {
+      if (Enemy == null)
+         Enemy = new java.util.HashSet<Enemy>();
+      return Enemy.iterator();
+   }
+   
+   /** @pdGenerated default setter
+     * @param newEnemy */
+   public void setEnemy(java.util.Collection<Enemy> newEnemy) {
+      removeAllEnemy();
+      for (java.util.Iterator iter = newEnemy.iterator(); iter.hasNext();)
+         addEnemy((Enemy)iter.next());
+   }
+   
+   /** @pdGenerated default add
+     * @param newEnemy */
+   public void addEnemy(Enemy newEnemy) {
+      if (newEnemy == null)
+         return;
+      if (this.Enemy == null)
+         this.Enemy = new java.util.HashSet<Enemy>();
+      if (!this.Enemy.contains(newEnemy))
+         this.Enemy.add(newEnemy);
+   }
+   
+   /** @pdGenerated default remove
+     * @param oldEnemy */
+   public void removeEnemy(Enemy oldEnemy) {
+      if (oldEnemy == null)
+         return;
+      if (this.Enemy != null)
+         if (this.Enemy.contains(oldEnemy))
+            this.Enemy.remove(oldEnemy);
+   }
+   
+   /** @pdGenerated default removeAll */
+   public void removeAllEnemy() {
+      if (Enemy != null)
+         Enemy.clear();
    }
 
 }

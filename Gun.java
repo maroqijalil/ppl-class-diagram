@@ -10,13 +10,11 @@ import java.util.*;
 public class Gun extends Object {
    /** @pdOid 3a9dd751-c45d-4ee0-9a9b-336eb485f98d */
    private int damage;
-   /** @pdOid a686cf43-0f25-49d5-b4fd-ca2e08a788a1 */
-   private java.util.Collection<Bullet> bullet;
    /** @pdOid 29ad9d8b-aef1-477e-91d6-2b9bcaf197a9 */
    private int ammo;
    
    /** @pdRoleInfo migr=no name=Bullet assc=association3 coll=java.util.Collection impl=java.util.HashSet mult=0..* type=Composition */
-   public java.util.Collection<Bullet> alwaysin;
+   public java.util.Collection<Bullet> bullet;
    
    /** @pdOid 407048ca-2d9b-425c-a671-376d88f27693 */
    public Gun() {
@@ -54,52 +52,52 @@ public class Gun extends Object {
    
    
    /** @pdGenerated default getter */
-   public java.util.Collection<Bullet> getAlwaysin() {
-      if (alwaysin == null)
-         alwaysin = new java.util.HashSet<Bullet>();
-      return alwaysin;
+   public java.util.Collection<Bullet> getBullet() {
+      if (bullet == null)
+         bullet = new java.util.HashSet<Bullet>();
+      return bullet;
    }
    
    /** @pdGenerated default iterator getter */
-   public java.util.Iterator getIteratorAlwaysin() {
-      if (alwaysin == null)
-         alwaysin = new java.util.HashSet<Bullet>();
-      return alwaysin.iterator();
+   public java.util.Iterator getIteratorBullet() {
+      if (bullet == null)
+         bullet = new java.util.HashSet<Bullet>();
+      return bullet.iterator();
    }
    
    /** @pdGenerated default setter
-     * @param newAlwaysin */
-   public void setAlwaysin(java.util.Collection<Bullet> newAlwaysin) {
-      removeAllAlwaysin();
-      for (java.util.Iterator iter = newAlwaysin.iterator(); iter.hasNext();)
-         addAlwaysin((Bullet)iter.next());
+     * @param newBullet */
+   public void setBullet(java.util.Collection<Bullet> newBullet) {
+      removeAllBullet();
+      for (java.util.Iterator iter = newBullet.iterator(); iter.hasNext();)
+         addBullet((Bullet)iter.next());
    }
    
    /** @pdGenerated default add
      * @param newBullet */
-   public void addAlwaysin(Bullet newBullet) {
+   public void addBullet(Bullet newBullet) {
       if (newBullet == null)
          return;
-      if (this.alwaysin == null)
-         this.alwaysin = new java.util.HashSet<Bullet>();
-      if (!this.alwaysin.contains(newBullet))
-         this.alwaysin.add(newBullet);
+      if (this.bullet == null)
+         this.bullet = new java.util.HashSet<Bullet>();
+      if (!this.bullet.contains(newBullet))
+         this.bullet.add(newBullet);
    }
    
    /** @pdGenerated default remove
      * @param oldBullet */
-   public void removeAlwaysin(Bullet oldBullet) {
+   public void removeBullet(Bullet oldBullet) {
       if (oldBullet == null)
          return;
-      if (this.alwaysin != null)
-         if (this.alwaysin.contains(oldBullet))
-            this.alwaysin.remove(oldBullet);
+      if (this.bullet != null)
+         if (this.bullet.contains(oldBullet))
+            this.bullet.remove(oldBullet);
    }
    
    /** @pdGenerated default removeAll */
-   public void removeAllAlwaysin() {
-      if (alwaysin != null)
-         alwaysin.clear();
+   public void removeAllBullet() {
+      if (bullet != null)
+         bullet.clear();
    }
 
 }

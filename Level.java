@@ -15,7 +15,7 @@ public class Level {
    /** @pdOid 437f0fed-4f51-4444-8fcb-11afa8a85e17 */
    private java.util.Collection<Enemy> enemy;
    
-   /** @pdRoleInfo migr=no name=Enemy assc=association7 coll=java.util.Collection impl=java.util.HashSet mult=0..* type=Aggregation */
+   /** @pdRoleInfo migr=no name=Enemy assc=association7 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
    public java.util.Collection<Enemy> canbein;
    
    /** @pdOid abb5098f-7a52-429a-8e49-2bed7e947ad7 */
